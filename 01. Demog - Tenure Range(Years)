@@ -1,0 +1,595 @@
+
+<style>
+   /* menu styles start */
+
+	main {
+            margin-top: 44px;
+            display: flex;
+        }
+
+        .menu-container ul{
+            margin: 0px;
+            width: 100%;
+            padding: 8px 0px ;
+        }
+
+        .menu-container ul li {
+            list-style-type: none;
+            white-space: nowrap;
+            overflow: hidden ;
+	    padding-left: 16px;
+	    padding-right: 16px;
+	    margin-bottom: 15px;
+	    font-size:12px;
+	    font-weight:bold;
+        }
+.menu-container ul li:first-child {
+		margin-top:15PX;
+}
+.menu-container ul li:hover {
+	background: #ccc;
+	cursor: pointer;
+}
+
+        .menu-container.open {
+            width: 200px;
+        }
+        .menu-container.open ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-container {
+            width: 64px;
+            transition: width .5s ease-in-out;
+            min-height: calc(100vh - 130px);
+            border-right: 1px solid #dcdcdc;
+        }
+
+        .menu-icon {
+            display: inline-block;
+            width: 25px;
+            flex-shrink: 0;
+        }
+
+        .menu-name {
+            display: none;
+            margin-left: 8px;
+        }
+
+        .menu-name.open {
+            display: inline-block;
+            min-width: 150px;
+        }
+
+        /* menu styles end */
+
+
+
+
+
+/*tenure styles start*/
+.tenure-headings {
+	display: flex;
+    position: relative;
+z-index: 1;
+}
+.tenure-heading1, .tenure-heading2 {
+	flex-basis: 0;
+	flex-grow: 1;
+	text-align: center;
+	border-radius: 4px;
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+.displayInlineBlock {
+display: inline-block;
+}
+.tenure-headings span {
+	padding: 8px 12px;
+	border-radius: 4px;
+}
+
+
+
+.tenure-container {
+    margin-top: -6px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.height150{
+
+	height:150px;
+
+}
+
+.height120{
+
+	height:120px;
+
+}
+
+.tnure-body{
+    display: flex;
+    background: #fff;
+    padding-top: 35px;
+    padding-bottom: 16px;
+    justify-content: center;
+    box-shadow: rgb(204, 204, 204) 0px 2px 8px 0px, rgb(204, 204, 204) 0px 2px 6px 0px;
+    border-radius: 8px;
+    position: relative;
+    top: -16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height:180px;
+    
+}
+.tenure-bar-container, .diversity-container {
+flex-basis: 0;
+flex-grow: 1;
+flex-shrink: 1;
+}
+.tenure-bar-container {
+    display: flex;
+}
+.vertical-axes {
+	width: 1px;
+	background: #000;
+}
+.tenure-bar-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.tenure-bar-item {
+	display: flex;
+	margin-bottom: 4px;
+	width: 100%;
+}
+.tenure-bar-item:last-child {
+	margin: 0px;
+}
+.tenure-bar-item:first-child {
+	margin-top: 0px;
+}
+
+.tenure-title-color{
+
+background-color: rgb(78,96,122);
+
+}
+
+.divercity-title-color{
+
+background-color: #24AAC4;
+
+}
+.tenurebar {
+
+margin-right: 4px;
+background-color: black;
+}
+
+.tennure-legend{
+
+	margin-top:12px;
+
+}
+
+.diversity-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.diversity-img-container {
+	position: relative;
+    width: 47px;
+    height: 80px;
+	position: relative;
+	overflow: hidden;
+}
+.diversity-img-container img {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.diversity-img-bg {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	
+	height: 0%;
+}
+
+.divercity-background-female{
+
+background-color:#F880DD;
+
+}
+
+.divercity-background-male{
+
+background-color:#3CC2F3;
+
+}
+
+.tenure-bar-color1{
+
+background:linear-gradient(to right, #568AB9, #28649B);
+
+}
+
+.tenure-bar-color2{
+
+background:linear-gradient(to right, #B1C1C1, #5D7373);
+
+}
+
+.tenure-bar-color3{
+
+background:linear-gradient(to right, #7976FB, #5C59D3);
+
+}
+
+.tenure-bar-color4{
+
+background:linear-gradient(to right, #80CBDC, #28BBDD);
+
+}
+
+.tenure-bar-color5{
+
+background:linear-gradient(to right, #D7BDE2, #BB8FCE);
+
+}
+
+.tenure-bar-color6{
+
+background:linear-gradient(to right, #7FC8FA, #52B3F4);
+
+}
+
+.tenure-bar-color7{
+
+background:linear-gradient(to right, #66D1F3, #0CBFF9);
+
+}
+
+.tenure-bar-color8{
+
+background:linear-gradient(to right, #BD87D3, #8e44ad);
+
+}
+
+.flex60 {
+	flex-grow: 0.6;
+}
+.flex40 {
+	flex-grow: 0.4;
+}
+
+
+.flexWrap{
+
+flex-wrap:wrap;
+
+}
+
+/*tenure styles end*/
+
+
+
+/* acceptance styles start*/
+.acceptance-bar-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+.acceptance-bar-container {
+	display: flex;
+	height: fit-content;
+	width: 100%;
+	padding-bottom:14px;
+}
+.acceptance-bar-wrapper {
+	
+}
+.acceptance-bar-wrapper .acceptancebar {
+
+}
+.horizotal-axes {
+ 
+}
+
+.acceptance-card-container{
+
+margin-top:17px;
+
+}
+
+.acceptance-card-container .tnure-body{
+
+padding-top:29px;
+padding-bottom:21px;
+}
+
+.acceptance-title-background{
+	background:#3EA5F5;
+
+}
+
+
+/* acceptance styles end*/
+
+
+
+
+
+
+
+
+/* Tenure Legend Color */
+
+.tenure-legend-color1{
+
+	color: #0C3B66;
+}
+
+.tenure-legend-color2{
+
+	color: #5D7373;
+}
+
+.tenure-legend-color3{
+
+	color: #5C59D3;
+}
+
+.tenure-legend-color4{
+
+	color: #22CEF6;
+}
+.tenure-legend-color5{
+
+	color: #B2B1A3;
+}
+.tenure-legend-color6{
+
+	color: #52B3F4;
+}
+
+
+
+
+
+
+   
+</style>
+
+                                   
+                                
+                        
+<main>
+
+<!-- tenure start -->
+<div class="width-helper">
+	<div class="tenure-container">
+	<div class="tenure-headings">
+		<div class="tenure-heading1 flex60">
+		
+		<span class="displayInlineBlock tenure-title-color">Tenure Range(Years)</span>
+		</div>
+		<div class="tenure-heading2 flex40"><span class="displayInlineBlock divercity-title-color">Diversity Mix</span></div>
+	</div>
+<div class="tnure-body">
+<div class="tenure-bar-container flexWrap flex60">
+<div class="acceptance-bar-container">
+<div class="vertical-axes">&nbsp;
+</div>
+<div class="tenure-bar-wrapper">
+	<div id="tenure16" class="tenure-bar-item">
+		<div class="tenurebar tenure-bar-color6">&nbsp;</div>
+		<div class="tenureval"><SpotfireControl id="31aeaf96f5a647a99379dcecaba20dee" /></div>
+	</div>
+	<div id="tenure11" class="tenure-bar-item">
+		<div class="tenurebar tenure-bar-color5">&nbsp;</div>
+		<div class="tenureval"><SpotfireControl id="f02db02f38dc461fad59a24946aea0c2" /></div>
+	</div>
+	<div id="tenure6" class="tenure-bar-item">
+		<div class="tenurebar tenure-bar-color4">&nbsp;</div>
+		<div class="tenureval"><SpotfireControl id="7439de84a5154aad8954fae8f696d0bd" /></div>
+	</div>
+	<div id="tenure3" class="tenure-bar-item">
+		<div class="tenurebar tenure-bar-color3">&nbsp;</div>
+		<div class="tenureval"><SpotfireControl id="8440cc86287b48eba9253b51aeaaa92b" /></div>
+	</div>
+	<div id="tenure1" class="tenure-bar-item">
+		<div class="tenurebar tenure-bar-color2">&nbsp;</div>
+		<div class="tenureval"><SpotfireControl id="24e35d629881409991c00b159e667fc0" /></div>
+	</div>
+	<div id="tenure0" class="tenure-bar-item">
+		<div class="tenurebar tenure-bar-color1">&nbsp;</div>
+		<div class="tenureval"><SpotfireControl id="ed2f2748f6a145dfb388b7fe63893ea9" /></div>
+		
+	</div>
+
+
+	
+</div>
+</div>
+<div class="tennure-legend width100percent">
+<SpotfireControl id="c667ce9a5e8d4eadbb3b90ada0ceab11" /><span class="tenure-legend-color1"> &lt 1</span>
+<SpotfireControl id="7917d2e90f9742ebac4eeb221e6a3c43" /><span class="tenure-legend-color2"> 1 -2 </span>
+<SpotfireControl id="74ccbfd266aa49cbb4f734376c9de9ac" /><span class="tenure-legend-color3"> 3 - 5</span>
+<SpotfireControl id="ebf2a86c103c4268b2269251e631f96e" /><span class="tenure-legend-color4"> 6 - 10</span>
+<SpotfireControl id="a45c63b71b8f4c9594ade5a3e42c6f58" /><span class="tenure-legend-color5"> 11 - 15</span>
+<SpotfireControl id="c17f1075281b45b6857bfc8e8283028f" /><span class="tenure-legend-color6">16+</span>
+
+</div>
+</div>
+
+<div class="diversity-container flex40">
+	<div id="femaleTenureVal" class="diversity-item">
+		<div class="diversity-img-container">
+			<div class="diversity-img-bg divercity-background-female">&nbsp;</div>
+			
+			<img src="f23e9803fbe843e9a94cfea4848ebae4.png" style="border: 0; width: 47px; height: 80px;"/>
+		</div>
+		<div class="diver-val">
+			<SpotfireControl id="fb941c257ec046c2934c989b9163a5b9" />
+		</div>
+	</div>
+
+	<div id="maleTenureVal" class="diversity-item">
+		<div class="diversity-img-container">
+			<div class="diversity-img-bg divercity-background-male">&nbsp;</div>
+			
+			<img src="c4084ab1292942d69d63a9c842175ee2.png" style="border: 0; width: 47px; height: 80px;"/>
+		</div>
+		<div class="diver-val">
+			<SpotfireControl id="c436a4e282af4fa7843551d72eac298b" />
+		</div>
+	</div>
+	
+</div>
+</div>
+	</div>
+</div>
+<!-- tenure end -->
+
+
+
+        </main>
+
+
+  
+
+
+
+
+<script>
+// tenure range start
+	// tenure range start
+		var tenure16Val = '';
+		var tenure11Val = '';
+		var tenure6Val = '';
+		var tenure3Val = '';
+		var tenure1Val = '';
+		var tenure0Val = '';
+
+	$("#tenure16 .tenureval").on('DOMSubtreeModified', function() {
+		var tenure16numwithcama=$(this).text();
+		var tenure16numwithoutcama=tenure16numwithcama.replace(",","");
+	    if (!isNaN(parseInt(tenure16numwithoutcama))) {
+		tenure16Val = parseInt($(this).text());
+		redrawTenure();
+	    }
+	})
+	$("#tenure11 .tenureval").on('DOMSubtreeModified', function() {
+		var tenure11numwithcama=$(this).text();
+		var tenure11numwithoutcama=tenure11numwithcama.replace(",","");
+	    if (!isNaN(parseInt(tenure11numwithoutcama))) {
+		tenure11Val = parseInt(tenure11numwithoutcama);
+		redrawTenure();
+	    }
+	})
+	$("#tenure6 .tenureval").on('DOMSubtreeModified', function() {
+		var tenure6numwithcama=$(this).text();
+		var tenure6numwithoutcama=tenure6numwithcama.replace(",","");
+	    if (!isNaN(parseInt(tenure6numwithoutcama))) {
+		tenure6Val = parseInt(tenure6numwithoutcama);
+		redrawTenure();	    
+	     }
+	})
+	$("#tenure3 .tenureval").on('DOMSubtreeModified', function() {
+		var tenure3numwithcama=$(this).text();
+		var tenure3numwithoutcama=tenure3numwithcama.replace(",","");
+	    if (!isNaN(parseInt(tenure3numwithoutcama))) {
+		tenure3Val = parseInt(tenure3numwithoutcama);
+		redrawTenure();
+	    }
+	})
+	$("#tenure1 .tenureval").on('DOMSubtreeModified', function() {
+		var tenure1numwithcama=$(this).text();
+		var tenure1numwithoutcama=tenure1numwithcama.replace(",","");
+	    if (!isNaN(parseInt(tenure1numwithoutcama))) {
+		tenure1Val = parseInt(tenure1numwithoutcama);
+		redrawTenure();
+	    }
+	})
+	$("#tenure0 .tenureval").on('DOMSubtreeModified', function() {
+		var tenure0numwithcama=$(this).text();
+		var tenure0numwithoutcama=tenure0numwithcama.replace(",","");
+	    if (!isNaN(parseInt(tenure0numwithoutcama))) {
+		tenure0Val = parseInt(tenure0numwithoutcama);
+		redrawTenure();
+	    }
+	})
+
+	function redrawTenure() {
+
+		if(!isNaN(tenure0Val) && !isNaN(tenure16Val) && !isNaN(tenure11Val) && !isNaN(tenure6Val) && !isNaN(tenure3Val) && !isNaN(tenure1Val)
+
+) {
+
+var maxTenureVal = Math.max(tenure0Val,tenure16Val,tenure11Val,tenure6Val, tenure3Val, tenure1Val);
+
+	$("#tenure0 .tenurebar").css("width", ((tenure0Val/maxTenureVal) * 100) + '%');
+$("#tenure16 .tenurebar").css("width", ((tenure16Val/maxTenureVal) * 100) + '%');
+	$("#tenure11 .tenurebar").css("width", ((tenure11Val/maxTenureVal) * 100) + '%');
+$("#tenure6 .tenurebar").css("width", ((tenure6Val/maxTenureVal) * 100) + '%');
+$("#tenure3 .tenurebar").css("width", ((tenure3Val/maxTenureVal) * 100) + '%');
+$("#tenure1 .tenurebar").css("width", ((tenure1Val/maxTenureVal) * 100) + '%');
+	
+		}
+
+	}
+
+
+
+
+// tenure range end
+</script>
+
+
+
+
+<script>
+// diversity start
+var tenureDiversityMale = 0;
+var tenureDiversityFemale = 0;
+	$("#femaleTenureVal .diver-val").on('DOMSubtreeModified', function() {
+	    if (!isNaN(parseInt($(this).text()))) {
+		tenureDiversityFemale = parseInt($(this).text());
+		redrawTenureDiversity();
+	    }
+	})
+	$("#maleTenureVal .diver-val").on('DOMSubtreeModified', function() {
+	    if (!isNaN(parseInt($(this).text()))) {
+		tenureDiversityMale = parseInt($(this).text());
+		redrawTenureDiversity();
+	    }
+	})
+
+function redrawTenureDiversity() {
+	
+	if(!isNaN(tenureDiversityMale) && !isNaN(tenureDiversityFemale)) {
+		$("#femaleTenureVal .diversity-img-bg").css("height", tenureDiversityFemale + '%');
+		$("#maleTenureVal .diversity-img-bg").css("height",  tenureDiversityMale + '%');
+	}
+}
+
+
+// diversity end
+
+</script>
+
+
