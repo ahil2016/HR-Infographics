@@ -1,8 +1,9 @@
-<!-- source mix start -->
+
+<!-- Exit Reason start -->
                     <div class="width-helper">
                         <div class="source-mix-container">
                             <div class="source-mix-heading">Exit Reason - YTD</div>
-                            <div class="source-mix-body">
+                            <div id="exit-reasons" class="source-mix-body">
                             </div>
 			    <div id="better-opportunity" class="displayNone"><SpotfireControl id="10e0e39096f343689fd4bf4d9a83704e" /></div>
                                 <div id="personal-Reason-R" class="displayNone"><SpotfireControl id="879e247e49aa4595810d69688d2bd310" /></div>
@@ -15,4 +16,198 @@
 				<div id="early-Retirement-Nocomment" class="displayNone"><SpotfireControl id="d70359a42b1e4a4bb721653984a1b110" /></div>
 			    </div>
                     </div>
-<!-- source mix end -->
+<!-- Exit Reason  end -->
+
+
+
+<script>
+        // source mix start
+    
+    
+        var exitReasonMap = [
+            {'better-opportunity': {label: 'Better Opportunity', val: ''}}, 
+            {'personal-Reason-R': {label: 'Personal Reason-R', val: ''}},
+            {'family-Reason': {label: 'Family Reason', val: ''}}, 
+            {'better-opportunity-R': {label: 'Better Opportunity-R', val: ''}},
+            {'return-school': {label: 'Return School', val: ''}},
+            {'resigned-Following-Leave': {label: 'Resigned Following Leave', val: ''}},
+            {'sponsor-companyHire-FSPonly': {label: 'Sponsor CompanyHire FSP only', val: ''}}, 
+            {'job-Abandonment': {label: 'Job Abandonment', val: ''}}
+        ];
+    
+        $("#better-opportunity").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'better-opportunity') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#personal-Reason-R").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'personal-Reason-R') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#family-Reason").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'family-Reason') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#better-opportunity-R").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'better-opportunity-R') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#return-school").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'return-school') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#resigned-Following-Leave").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'resigned-Following-Leave') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#sponsor-companyHire-FSPonly").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'sponsor-companyHire-FSPonly') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        $("#job-Abandonment").on('DOMSubtreeModified', function () {
+            if (!isNaN(parseInt($(this).text()))) {
+                for(var i=0; i< exitReasonMap.length; i++) {
+                    var srcMxEle = exitReasonMap[i];
+                    var srcMxEleKey = Object.keys(srcMxEle)[0];
+                    if(srcMxEleKey == 'job-Abandonment') {
+                        exitReasonMap[i][srcMxEleKey]['val'] = parseInt($(this).text());
+                        break;
+                    }
+                }
+                redrawExitReason();
+            }
+        })
+    
+        function redrawExitReason() {
+        var isAllValsPresent = true;
+        for(var k=0; k<exitReasonMap.length; k++) {	
+            var srcRawMxItem = exitReasonMap[k];
+                    var srcRawMxItemKey = Object.keys(srcRawMxItem)[0];
+                    var srcRawMxItemVal = srcRawMxItem[srcRawMxItemKey]['val'];
+            if(isNaN(srcRawMxItemVal)) {
+                isAllValsPresent = false;
+            }
+        }
+    
+            if(isAllValsPresent) {
+    
+                var sortedSrcMx = exitReasonMap.sort((a,b) => {
+                    var aKey = Object.keys(a)[0];
+                    var bKey = Object.keys(b)[0];
+                    var aEle = a[aKey];
+                    var bEle = b[bKey];
+                    return bEle['val'] - aEle['val']
+                })
+            var srcMxMaxItem = sortedSrcMx[0];
+                    var srcMxMaxItemKey = Object.keys(srcMxMaxItem)[0];
+                    var srcMxMaxItemVal = srcMxMaxItem[srcMxMaxItemKey]['val'];
+            
+            $('#exit-reasons').html('');
+                for(var i=0; i<sortedSrcMx.length; i++) {
+                    var srcMxItem = sortedSrcMx[i];
+                    var srcMxItemKey = Object.keys(srcMxItem)[0];
+                    var srcMxItemVal = srcMxItem[srcMxItemKey]['val'];
+                    var srcMxItemLabel = srcMxItem[srcMxItemKey]['label'];
+                    var rowSrxMx = $('<div>', {
+                        class: 'source-mix-row'
+                    }).appendTo('#exit-reasons');
+    
+                    $('<div>', {
+                        class: 'source-mix-label',
+                        html: srcMxItemLabel,
+                    }).appendTo(rowSrxMx);
+                    
+                    $('<div>', {
+                        class: 'source-mix-axes',
+                        html: ' ',
+                    }).appendTo(rowSrxMx);
+    
+                    var barContainer = $('<div>', {
+                        class: 'source-mix-bar-container tenure-bar-color4',
+                        html: ' ',
+                        
+                    }).appendTo(rowSrxMx);
+                    barContainer.css({'flex-grow': srcMxItemVal/srcMxMaxItemVal});
+    
+                    $('<div>', {
+                        class: 'source-mix-val',
+                        html: srcMxItemVal ? srcMxItemVal + '%' : '0%'
+                    }).appendTo(rowSrxMx);
+                }
+    
+            }
+        }
+    
+        // source mix end 
+        
+    
+        </script>
