@@ -1,0 +1,450 @@
+<style>
+.sfc-style-root .sf-element-panel-area{
+z-index: 1;
+}
+.sfc-style-root .sf-element-scroll-bar {
+
+display:none !important;
+}
+
+	.main-title-wrapper {
+		display: flex;
+		position: fixed;
+		top: 30px;
+		left: 0px;
+		width: 100%;
+		z-index: 1;
+		background-color: #fff;
+		border-bottom: 1px solid #ddd;
+		padding: 8px 32px;
+	}
+	
+	
+
+	.main-title-wrapper .logo {
+		height: 35px;
+	}
+
+	.main-title-wrapper .title {
+		margin-left: auto;
+		margin-right: auto;
+		//text-transform: uppercase;
+		
+	}
+
+	.main-title-wrapper .info {
+		margin-right: 50px;
+	}
+
+	.info svg {
+
+		cursor: pointer;
+
+	}
+
+	.main-title-wrapper .title h1 {
+		margin: 0px;
+
+	}
+
+	.main-title-wrapper .logo img {
+		height: 80%;
+		width: auto;
+	}
+
+	.navlist {
+		background-color: #fff;
+		margin: 0px;
+		display: flex;
+		justify-content: center;
+		padding: 8px 0px;
+		position: fixed;
+		top: 82px;
+		left: 0px;
+		z-index: 1;
+		width: 100%;
+
+	}
+
+	.navlist li {
+		margin: 0px;
+		list-style-type: none;
+		// margin-right: 24px;
+		position: relative;
+	}
+
+	.navlist li a {
+		margin: 0px;
+		color: #707070 !important;
+
+	}
+
+	.navlist li a:hover {
+		color: #707070 !important;
+		text-decoration: none;
+		//border-bottom: 2px solid #0097d1;
+
+	}
+
+	.menu-arrow {
+		fill: #707070;
+		margin-left: 4px;
+		transform: rotate(270deg);
+		transition: transform .45s ease 0s;
+	}
+
+	.navlist li:hover .menu-arrow {
+		fill: #707070;
+		transform: rotate(90deg);
+	}
+
+	.listitem {
+		border-left: 1px solid #707070;
+		padding: 2px 10px;
+	}
+
+	.listitem:last-child {
+		border-right: 1px solid #707070;
+	}
+
+	.dropdown-links {
+		max-height: 0px;
+		position: absolute;
+		top: 29px;
+		left: 0px;
+		z-index: 9999;
+		overflow: hidden;
+		transition: max-height .45s ease 0s;
+		box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	.navlist li:hover .dropdown-links {
+		max-height: 1000px;
+	}
+
+	.dropdown-links ul {
+		padding: 16px;
+		background: #fff;
+		min-width: 248px;
+		padding: 0px;
+
+	}
+
+	.dropdown-links ul li  {
+		
+		color: #707070 !important;
+		cursor: pointer;
+		//padding: 8px 16px;
+	}
+	.dropdown-links ul li a{
+		width: 100%;
+		display: inline-block;
+		padding: 8px 16px;
+	}
+	
+
+
+	.dropdown-links ul li:hover {
+		background-color: #ddd;
+		color: #fff !important;
+	}
+
+	.navlink {
+
+		text-transform: uppercase;
+	}
+
+	.model-wraper {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 1000;
+		text-align: center;
+		display: none;
+	}
+
+	.model-wraper.show-modal {
+		display: block;
+	}
+
+	.model-wraper .content {
+		background-color: #fff;
+		display: inline-block;
+		margin-top: 10%;
+		width: 500px;
+		//min-height: 250px;
+
+	}
+
+	.model-wraper .content .model-header {
+		padding: 16px;
+		font-size: 20px;
+		border-bottom: 1px solid #ddd;
+
+	}
+
+	.model-wraper .content .model-header .close {
+		float: right;
+		cursor: pointer;
+
+
+	}
+
+	.model-wraper .model-body {
+
+		display: flex;
+		flex-wrap: wrap;
+		//min-height: 196px;
+		padding: 16px;
+		padding-top: 20px;
+		//align-items: center;
+		//justify-content: center;
+		font-size: 16px;
+
+	}
+
+	.model-wraper .model-footer {
+		border-top: 1px solid #ddd;
+		padding: 16px;
+		display:flex;
+		
+		
+	}
+
+	.model-wraper .model-body .msg-title {
+
+		padding-left: 8px;
+		padding-bottom: 8px;
+
+	}
+
+	.model-wraper .model-body .msg-text {
+
+		padding-left: 24px;
+		font-size: 14px;
+		font-weight:100px;
+		
+		
+
+	}
+	.model-wraper.utilization-info-modal .ok{
+		color: #fff;
+		background: #1890ff;
+		border-color: #1890ff;
+		margin-left:auto;
+		margin-right:24px;
+		padding:4px 15px;
+		cursor:pointer;
+		border: 1px solid;
+		
+		
+
+}
+.navlist .date-li {
+	margin-right: auto;
+	margin-left: 30px;
+	margin-top:auto;
+	color:#000;
+	font-size: 12px;
+}
+
+.navlist li:last-child {
+	margin-right: auto;
+}
+
+.active-menu{
+ border-bottom : 2px solid #3D88FC;
+}
+
+</style>
+
+<div class="main-title-wrapper">
+	<div class="logo">
+		
+		<img src="ea16258ae3d74ea9acdb010beb7c650a.png" style="border: 0; width="50" height="50""/>
+	</div>
+	<div class="title">
+		<h1>Enterprise Solutions Executive Metrics Dashboard
+		
+	</h1>
+	</div>
+	
+	<div class="info utilization-info-icon">
+		<svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 512 512" width="30">
+			<path fill='#000'
+				d="m277.332031 128c0 11.78125-9.550781 21.332031-21.332031 21.332031s-21.332031-9.550781-21.332031-21.332031 9.550781-21.332031 21.332031-21.332031 21.332031 9.550781 21.332031 21.332031zm0 0" />
+			<path fill='#000'
+				d="m256 405.332031c-8.832031 0-16-7.167969-16-16v-165.332031h-21.332031c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h37.332031c8.832031 0 16 7.167969 16 16v181.332031c0 8.832031-7.167969 16-16 16zm0 0" />
+			<path fill='#000'
+				d="m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0" />
+			<path fill='#000'
+				d="m304 405.332031h-96c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h96c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+		</svg>
+
+	</div>
+</div>
+
+<ul class='navlist'>
+<li class="date-li">
+Jun, 2021
+</li>
+	<li class='listitem' >
+		<a class='navlink active-menu' href='#'>
+			<span>Home</span>
+
+		</a>
+	</li>
+	<li class='listitem'>
+		<a class='navlink' href='#'>
+			<span>Finance</span><span><svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+					class="menu-arrow">
+					<path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="_2JzwqO"></path>
+				</svg></span></a>
+		<div class="dropdown-links">
+			<ul>
+				<li><SpotfireControl id="8a669f8f5f72446aa7bce708d1fbcbbf" /></li>
+				<li><SpotfireControl id="fb31f347ff4642da90fc6a5b825a49b9" /></li>
+				
+				<ul>
+		</div>
+	</li>
+	<li class='listitem'>
+		<a class='navlink' href='#'><span>HR Metrics</span><span><svg width="4.7" height="8"
+					viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="menu-arrow">
+					<path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="_2JzwqO"></path>
+				</svg></span></a>
+	<div class="dropdown-links">
+			<ul>
+				<li>
+				<SpotfireControl id="e46526ad43d54bbeaeec7f5c228c0f5c" />	
+				</li>
+				
+				<li><SpotfireControl id="a5d5c7b11cb343bf97e3ab3e3a6e9c51" /></li>
+				
+				<ul>
+		</div>
+
+	</li>
+
+	<li class='listitem'>
+		<a class='navlink' href='#'>
+			<span>QA Metrics</span><span><svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+					class="menu-arrow">
+					<path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="_2JzwqO"></path>
+				</svg></span></a>
+	<div class="dropdown-links">
+			<ul>
+				<li><SpotfireControl id="c87128431a0443c0b1f487f940a70034" /></li>
+				<li><SpotfireControl id="ec7705f9c7e648c9b3ce9affcfe1fa6e" /></li>
+				<li><SpotfireControl id="f0a82861d9e0486ea81d66d8a1d3cd43" /></li>
+				<li><SpotfireControl id="48761936d3fd4c5ebcef0b5958541cd5" /></li>
+				<ul>
+		</div>
+	
+	</li>
+	
+
+	
+	<li class='listitem'>
+		<a class='navlink' href='#'><span>Sales Performance</span><span><svg width="4.7" height="8" viewBox="0 0 16 27"
+					xmlns="http://www.w3.org/2000/svg" class="menu-arrow">
+					<path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="_2JzwqO"></path>
+				</svg></span></a>
+		<div class="dropdown-links">
+			<ul>
+				
+				<li>
+				<SpotfireControl id="952033ee45d14a08a7d762fb45ca0f58" />	
+				</li>
+				
+				<li><SpotfireControl id="07da9e60301d44f8b3c1db15b48d8784" /></li>
+				<li><SpotfireControl id="5c1a98f552bc4821b856158a667569c3" /></li>
+				<li><SpotfireControl id="aaf66282ce5b47fba0aeef0a8550bca1" /></li>
+				<ul>
+		</div>
+
+	</li>
+	
+<li class='listitem'>
+		<a class='navlink' href='#'><span>Operational Performance</span><span><svg width="4.7" height="8"
+					viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="menu-arrow">
+					<path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" class="_2JzwqO"></path>
+				</svg></span></a>
+	<div class="dropdown-links">
+			<ul>
+				<li>
+				<SpotfireControl id="49b017cd1e4648e1b38dacea865efba7" />	
+				</li>
+				<li>
+				<SpotfireControl id="3e9d412c7a02461b81c0cc8531d71f72" />	
+				</li>
+				<li><SpotfireControl id="cf2c53581e3b4796aaecb008600270e4" /></li>
+				<li><SpotfireControl id="a070e8e22c4b43519286a11208b2ab2f" /></li>
+				<li><SpotfireControl id="7013c5ab047d4bdbb1d69b4d0ad97b4b" /></li>
+				<li>
+				<SpotfireControl id="10c0c4be33434e91bfceaeb563766001" />	
+				</li>
+				<li>
+				<SpotfireControl id="cfe49c54ebc5405db981d60d22e3e25e" />	
+				</li>
+				<li><SpotfireControl id="b5af574a27004c668706d77094d7ade4" /></li>
+				<li><SpotfireControl id="ac51b62914874493a6961a60b8fab194" /></li>
+				<ul>
+		</div>
+
+
+	</li>
+
+	</li>
+
+</ul>
+
+<div class='model-wraper utilization-info-modal'>
+	<div class='content utilization-info-modal-content'>
+		<!-- <div class='model-header'>
+<span>Utilization</span><span class='close'>X</span>
+</div> -->
+
+		<div class='model-body'><span class='icon'><svg viewBox="64 64 896 896" focusable="false"
+					data-icon="info-circle" width="1em" height="1em" fill="#1890ff" aria-hidden="true">
+					<path
+						d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+					</path>
+					<path
+						d="M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+					</path>
+				</svg></span>
+			<span class='Body-Message'>
+				<div class='msg-title'>ES Dashboard Updates</div>
+			</span><span>
+				<div class='msg-text'>"Any informative text that can be provided to the user"</div>
+			</span>
+		</div>
+		<div class='model-footer'>
+			<button class="ok">OK</button>
+		</div>
+	</div>
+
+</div>
+
+<script>
+	document.querySelector('.main-title-wrapper .info').addEventListener('click', function () {
+		console.log('clicked');
+		document.querySelector('.utilization-info-modal').classList.add("show-modal");
+	})
+
+	document.addEventListener('click', function(e) {
+		if(e.target.closest('.utilization-info-modal-content') || e.target.closest('.utilization-info-icon')) {
+			return;
+		}
+		document.querySelector('.utilization-info-modal').classList.remove("show-modal");
+	})
+
+document.querySelector('.model-wraper.utilization-info-modal .ok').addEventListener('click', function (){
+document.querySelector('.utilization-info-modal').classList.remove("show-modal");
+})
+
+</script>
