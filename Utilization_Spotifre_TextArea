@@ -1,0 +1,65 @@
+JavaScript :
+
+
+
+
+$(document).ready(function(){
+	var myvar=setTimeout(changeGuage,500);
+});
+
+function changeGuage(){
+	
+	val4=document.getElementById('calcValue');
+	intTile4Value =  parseFloat(val4.innerText);
+	var utilizationPercentage=intTile4Value;
+	var guageColor=utilizationPercentage >= 62 ? '#84d9a3' : utilizationPercentage >=57 && utilizationPercentage <62 ? '#F7DC6F' : '#f58d8d' ;
+
+	var js0 =  "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js";
+	var js1 = "//cdnjs.cloudflare.com/ajax/libs/justgage/1.2.9/justgage.min.js";
+	
+	var scripts = [js1, js0];
+		function initGage() {
+		
+		var g = new JustGage({
+			
+	id: "gauge", 
+    value: intTile4Value,
+	min: 0,
+    max: 100,
+	symbol: "%",
+	pointer: true,
+	decimals: 1,
+	counter: true,
+	valueMinFontSize:16,
+	
+	valueFontColor:"#4a4a4a",
+    
+	
+	levelColors: [guageColor]  //update colors based on the result out put
+		});					  // Green - #41c572 Amber - #ffbf00  Red - #f58d8d
+		
+		
+		$(calcValue).on('DOMSubtreeModified',function(){
+		 g.refresh($(this).text())
+  })
+	}
+	
+	function getNextScript() {
+		if (scripts.length === 0) {
+			initGage();
+		} else {
+			$.getScript(scripts.pop(), getNextScript);
+		}
+	}
+	getNextScript();}
+
+
+
+HTML : 
+
+<DIV style="WIDTH: 130px; HEIGHT: 134px; border: 1px solid #ccc; border-radius: 4px;  box-shadow: 0 2px 8px 0 #ccc, 0 2px 6px 0 #ccc;" id=gauge></DIV>
+<div  style="display:none" id=calcValue>
+<SpotfireControl id="3394390b6e874321a60b8032a2c49af2" />
+</div>
+
+
