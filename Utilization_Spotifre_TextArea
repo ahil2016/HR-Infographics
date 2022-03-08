@@ -1,8 +1,5 @@
 JavaScript :
 
-
-
-
 $(document).ready(function(){
 	var myvar=setTimeout(changeGuage,500);
 });
@@ -31,7 +28,7 @@ function changeGuage(){
 	decimals: 1,
 	counter: true,
 	valueMinFontSize:16,
-	
+	title:"Utilization",
 	valueFontColor:"#4a4a4a",
     
 	
@@ -40,6 +37,7 @@ function changeGuage(){
 		
 		
 		$(calcValue).on('DOMSubtreeModified',function(){
+		if($(this).text()&&!isNaN($(this).text()))
 		 g.refresh($(this).text())
   })
 	}
@@ -52,6 +50,8 @@ function changeGuage(){
 		}
 	}
 	getNextScript();}
+
+
 
 
 
